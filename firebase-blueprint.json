@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "mediaItem": {
+      "title": "Media Item",
+      "description": "Represents a Turkish movie or series catalog item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["movie", "series"] },
+        "categoryId": { "type": "string" },
+        "synopsis": { "type": "string" },
+        "posterUrl": { "type": "string" },
+        "backdropUrl": { "type": "string" },
+        "releaseYear": { "type": "number" },
+        "rating": { "type": "number" },
+        "genres": { "type": "array" },
+        "views": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "type", "categoryId"]
+    },
+    "siteSettings": {
+      "title": "Site Settings",
+      "description": "Site configuration such as ad settings and catalog metadata",
+      "type": "object",
+      "properties": {
+        "isEnabled": { "type": "boolean" },
+        "headerScript": { "type": "string" },
+        "playerBannerHtml": { "type": "string" },
+        "homeBannerHtml": { "type": "string" },
+        "seeded": { "type": "boolean" }
+      }
+    }
+  },
+  "firestore": {
+    "/egyturk_media_items/{itemId}": {
+      "schema": "mediaItem",
+      "description": "Public catalog of translated Turkish series and movies (B3 EGY TURK)"
+    },
+    "/egyturk_site_settings/{settingId}": {
+      "schema": "siteSettings",
+      "description": "Public site configuration (B3 EGY TURK)"
+    }
+  }
+}

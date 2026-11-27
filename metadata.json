@@ -1,0 +1,6 @@
+{
+  "name": "ايجي تورك EGY TURK | مسلسلات وأفلام تركية مترجمة",
+  "description": "موقع ايجي تورك EGY TURK الرسمي لمشاهدة وتحميل أحدث المسلسلات والأفلام التركية المترجمة (دراما، أكشن، تاريخي، رومانسي) كاملة بأعلى جودة FHD مجاناً.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

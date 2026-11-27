@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // B1: MIFLIX collections
+    match /media_items/{itemId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /site_settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // B2: KuBe Movie collections
+    match /kube_media_items/{itemId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /kube_site_settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // B3: EGY TURK collections
+    match /egyturk_media_items/{itemId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /egyturk_site_settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}
